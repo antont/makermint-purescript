@@ -4,9 +4,8 @@ output/
 .psci_modules/
 .psc-ide-port
 
-# Built apps and games
-public/apps/**/app.js
-public/games/**/app.js
+# Built apps and games (entire public/ directory is generated)
+public/
 
 # Node
 node_modules/

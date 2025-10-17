@@ -57,9 +57,18 @@ makermint-purescript/
 │       │   ├── DataStructures.purs      # Arrays, Maybe, custom types
 │       │   └── FunctionalPatterns.purs  # Functors, Monads, Either
 │       ├── Apps/                        # Web application examples
+│       │   └── TodoApp/
+│       │       ├── TodoApp.purs         # PureScript code
+│       │       └── index.html           # HTML shell
 │       └── Games/                       # Game examples
+│           └── TicTacToe/
+│               ├── TicTacToe.purs       # PureScript code
+│               └── index.html           # HTML shell
 ├── test/
 │   └── Main.purs                        # Test suite
+├── public/                              # Generated (gitignored)
+│   ├── apps/todo/                       # Built TodoApp
+│   └── games/tictactoe/                 # Built TicTacToe
 ├── spago.yaml                           # Spago configuration
 └── package.json                         # npm configuration
 ```

@@ -12,10 +12,10 @@
     "cli:data": "./node_modules/.bin/spago run --main Examples.CLI.DataStructures", 
     "cli:functional": "./node_modules/.bin/spago run --main Examples.CLI.FunctionalPatterns",
     "cli": "./node_modules/.bin/spago run",
-    "app:todo:build": "./node_modules/.bin/spago bundle --module Examples.Apps.TodoApp --outfile public/apps/todo/app.js --platform browser",
+    "app:todo:build": "mkdir -p public/apps/todo && ./node_modules/.bin/spago bundle --module Examples.Apps.TodoApp.TodoApp --outfile public/apps/todo/app.js --platform browser && cp src/Examples/Apps/TodoApp/index.html public/apps/todo/",
     "app:todo:dev": "npm run app:todo:build && npx http-server public/apps/todo -p 9090 -o",
     "app:todo": "npm run app:todo:dev",
-    "game:tictactoe:build": "./node_modules/.bin/spago bundle --module Examples.Games.TicTacToe --outfile public/games/tictactoe/app.js --platform browser",
+    "game:tictactoe:build": "mkdir -p public/games/tictactoe && ./node_modules/.bin/spago bundle --module Examples.Games.TicTacToe.TicTacToe --outfile public/games/tictactoe/app.js --platform browser && cp src/Examples/Games/TicTacToe/index.html public/games/tictactoe/",
     "game:tictactoe:dev": "npm run game:tictactoe:build && npx http-server public/games/tictactoe -p 9091 -o",
     "game:tictactoe": "npm run game:tictactoe:dev",
     "spago": "./node_modules/.bin/spago"

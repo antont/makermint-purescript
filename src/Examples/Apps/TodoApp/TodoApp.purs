@@ -1,4 +1,4 @@
-module Examples.Apps.TodoApp where
+module Examples.Apps.TodoApp.TodoApp where
 
 import Prelude
 

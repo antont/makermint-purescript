@@ -1,4 +1,4 @@
-module Examples.Games.TicTacToe where
+module Examples.Games.TicTacToe.TicTacToe where
 
 import Prelude
 
