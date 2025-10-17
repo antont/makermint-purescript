@@ -1,0 +1,29 @@
+{
+  "name": "makermint-purescript",
+  "version": "1.0.0",
+  "description": "PureScript example applications for testing LLM capabilities",
+  "scripts": {
+    "build": "./node_modules/.bin/spago build",
+    "test": "./node_modules/.bin/spago test",
+    "repl": "./node_modules/.bin/spago repl",
+    "clean": "rm -rf output .spago",
+    "start": "./node_modules/.bin/spago run",
+    "cli:hello": "./node_modules/.bin/spago run --main Examples.CLI.HelloWorld",
+    "cli:data": "./node_modules/.bin/spago run --main Examples.CLI.DataStructures", 
+    "cli:functional": "./node_modules/.bin/spago run --main Examples.CLI.FunctionalPatterns",
+    "cli": "./node_modules/.bin/spago run",
+    "app:todo:build": "./node_modules/.bin/spago bundle --module Examples.Apps.TodoApp --outfile public/apps/todo/app.js --platform browser",
+    "app:todo:dev": "npm run app:todo:build && npx http-server public/apps/todo -p 9090 -o",
+    "app:todo": "npm run app:todo:dev",
+    "game:tictactoe:build": "./node_modules/.bin/spago bundle --module Examples.Games.TicTacToe --outfile public/games/tictactoe/app.js --platform browser",
+    "game:tictactoe:dev": "npm run game:tictactoe:build && npx http-server public/games/tictactoe -p 9091 -o",
+    "game:tictactoe": "npm run game:tictactoe:dev",
+    "spago": "./node_modules/.bin/spago"
+  },
+  "devDependencies": {
+    "purescript": "^0.15.15",
+    "spago": "^0.93.44",
+    "http-server": "^14.1.1",
+    "esbuild": "^0.24.0"
+  }
+}

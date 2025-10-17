@@ -1,0 +1,26 @@
+package:
+  name: makermint-purescript
+  dependencies:
+    - console
+    - effect
+    - prelude
+    - arrays
+    - strings
+    - maybe
+    - either
+    - tuples
+    - foldable-traversable
+    - halogen
+    - web-html
+    - web-dom
+    - web-uievents
+    - gesso
+    - canvas
+  test:
+    main: Test.Main
+    dependencies:
+      - spec
+workspace:
+  packageSet:
+    registry: 66.9.1
+  extraPackages: {}
