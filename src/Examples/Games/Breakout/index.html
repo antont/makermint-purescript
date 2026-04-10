@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Breakout - PureScript</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family:
+                    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                    Oxygen, Ubuntu, Cantarell, sans-serif;
+                background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+                min-height: 100vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 20px;
+            }
+
+            h1 {
+                color: #00ff88;
+                margin-bottom: 20px;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            }
+
+            #canvas-container {
+                background: #0f0f23;
+                border-radius: 15px;
+                box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+                padding: 20px;
+            }
+
+            canvas {
+                display: block;
+                border-radius: 10px;
+            }
+
+            .instructions {
+                color: white;
+                text-align: center;
+                margin-top: 20px;
+                font-size: 18px;
+                text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+            }
+
+            .key-hint {
+                color: rgba(255, 255, 255, 0.8);
+                font-size: 14px;
+                margin-top: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>🧱 Breakout</h1>
+        <div id="canvas-container">
+            <!-- Canvas will be inserted here by Halogen -->
+        </div>
+        <div class="instructions">
+            <div>Use mouse or arrow keys to move the paddle</div>
+            <div class="key-hint">Press Space to reset when game ends</div>
+        </div>
+        <script src="app.js" type="module"></script>
+    </body>
+</html>

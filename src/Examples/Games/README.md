@@ -26,6 +26,30 @@ This will build the game and start a local server at http://localhost:9091
 npm run game:tictactoe:build
 ```
 
+## Snake
+
+A classic Snake game using HTML5 Canvas and Halogen.
+
+**Features:**
+- ✅ Canvas-based rendering with snake and food
+- ✅ Arrow key controls
+- ✅ Score tracking
+- ✅ Game over detection (wall and self collision)
+- ✅ Reset functionality
+- ✅ Beautiful animations and colors
+
+**Run it:**
+```bash
+npm run game:snake
+```
+
+This will build the game and start a local server at http://localhost:9091
+
+**Build only:**
+```bash
+npm run game:snake:build
+```
+
 ## Architecture
 
 The Tic-Tac-Toe game demonstrates:

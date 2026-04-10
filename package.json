@@ -9,7 +9,7 @@
     "clean": "rm -rf output .spago",
     "start": "./node_modules/.bin/spago run",
     "cli:hello": "./node_modules/.bin/spago run --main Examples.CLI.HelloWorld",
-    "cli:data": "./node_modules/.bin/spago run --main Examples.CLI.DataStructures", 
+    "cli:data": "./node_modules/.bin/spago run --main Examples.CLI.DataStructures",
     "cli:functional": "./node_modules/.bin/spago run --main Examples.CLI.FunctionalPatterns",
     "cli": "./node_modules/.bin/spago run",
     "app:todo:build": "mkdir -p public/apps/todo && ./node_modules/.bin/spago bundle --module Examples.Apps.TodoApp.TodoApp --outfile public/apps/todo/app.js --platform browser && cp src/Examples/Apps/TodoApp/index.html public/apps/todo/",
@@ -18,12 +18,19 @@
     "game:tictactoe:build": "mkdir -p public/games/tictactoe && ./node_modules/.bin/spago bundle --module Examples.Games.TicTacToe.TicTacToe --outfile public/games/tictactoe/app.js --platform browser && cp src/Examples/Games/TicTacToe/index.html public/games/tictactoe/",
     "game:tictactoe:dev": "npm run game:tictactoe:build && npx http-server public/games/tictactoe -p 9091 -o",
     "game:tictactoe": "npm run game:tictactoe:dev",
+    "game:snake:build": "mkdir -p public/games/snake && ./node_modules/.bin/spago bundle --module Examples.Games.Snake.Snake --outfile public/games/snake/app.js --platform browser && cp src/Examples/Games/Snake/index.html public/games/snake/",
+    "game:snake:dev": "npm run game:snake:build && npx http-server public/games/snake -p 9092 -o",
+    "game:snake": "npm run game:snake:dev",
+    "game:breakout:build": "mkdir -p public/games/breakout && ./node_modules/.bin/spago bundle --module Examples.Games.Breakout.Breakout --outfile public/games/breakout/app.js --platform browser && cp src/Examples/Games/Breakout/index.html public/games/breakout/",
+    "game:breakout:dev": "npm run game:breakout:build && npx http-server public/games/breakout -p 9093 -o",
+    "game:breakout": "npm run game:breakout:dev",
     "spago": "./node_modules/.bin/spago"
   },
   "devDependencies": {
-    "purescript": "^0.15.15",
-    "spago": "^0.93.44",
+    "esbuild": "^0.24.0",
     "http-server": "^14.1.1",
-    "esbuild": "^0.24.0"
+    "puppeteer": "^24.40.0",
+    "purescript": "^0.15.15",
+    "spago": "^0.93.44"
   }
 }
